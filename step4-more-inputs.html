@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function inputHandler(source){
+            document.getElementById(source.type).value = source.value;
+        }
+    </script>
+</head>
+<body>
+   <form action="">
+    <table>
+        <thead>
+            <tr> <th colspan="2"> User Login Form </th> </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>User Name</th>
+                <td> <input required name="username" autocomplete="username" autofocus type="text"/> </td>
+            </tr>
+            <tr>
+                <th>User eMail</th>
+                <td> <input required placeholder="use your personal email id" type="email"/> </td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td> <input type="password"/> </td>
+            </tr>
+            <tr>
+                <td colspan="2"> <button>Login</button> </td>
+            </tr>
+        </tbody>
+    </table>
+   </form>
+
+   <hr>
+
+   <table>
+       <tbody>
+           <tr>
+               <th>Progress</th>
+               <td> <progress></progress> </td>
+               <td> <progress value="0"></progress> </td>
+               <td> <progress value="1"></progress> </td>
+               <td> <input min="0" step="0.1" max="1" type="range" oninput="inputHandler(this)"> </td>
+               <td> <progress id="range"></progress> </td>
+           </tr>
+           <tr>
+               <th>Meter</th>
+               <td> <meter low="0.3" high="0.7" optimum="0.5" value="0.5"></meter> </td>
+               <td> <meter low="0.3" high="0.7" optimum="0.2" value="0.8"></meter> </td>
+               <td> <meter low="0.3" high="0.7" optimum="0.8" value="0.2"></meter> </td>
+               <td> <meter low="0.3" high="0.7" optimum="0.5" value="0.1"></meter>  </td>
+               <td> <meter low="0.3" high="0.7" optimum="0.5" value="0.8"></meter> </td>
+           </tr>
+       </tbody>
+   </table>
+</body>
+</html>
