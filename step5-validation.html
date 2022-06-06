@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        form{
+            width: 330px;
+        }
+        #formtitle{
+           /*  text-align: center; */
+           margin-left: 155px;
+           margin-bottom: 10px;
+        }
+        label{
+            width: 150px;
+            display: inline-block;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+        button{
+            margin-top: 20px;
+            margin-left: 155px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="get">
+        <div id="formtitle">
+            New User Registeration
+        </div>
+        <div>
+            <label for="uname">User Name</label>
+            <input required name="uname" id="uname" type="text">
+        </div>
+        <div>
+            <label for="uage">User Age</label>
+            <input required min="18" max="90" name="uage" id="uage" step="0.5" type="number">
+        </div>
+        <div>
+            <label for="uphone">User Land Phone</label>
+            <input required name="uphone" title="###-########" pattern="\d{3}-\d{8}" id="uphone" type="tel">
+        </div>
+        <div>
+            <label for="uemail">User eMail</label>
+            <input required name="uemail" pattern="\S+@\S+\.\S+" id="uemail" >
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
